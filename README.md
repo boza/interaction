@@ -1,6 +1,8 @@
 # Interaction
 
-TODO: Write a gem description
+Interactions are meant to keep controllers and models or any other business logic slim (YAY).
+Keep intention of class clear when using interactions, for example: 
+To create a user, a class should be name Users::Create.
 
 ## Installation
 
@@ -20,7 +22,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+class Klass
+  include Interaction
+
+  fail_with 'ErrorClass'
+  requires :param1, :param2     
+
+  private
+  
+  def run
+    method
+  rescue => e
+    @error = e.message
+  end
+
+  def method
+    param1 / param2
+  end
+
+end
+
+interaction = Klass.run(param1: 2, param2: 1)
+interaction.success? #=> true
+interaction.error #=> nil
+interaction.result #=> 2
+
+Klass.run!(param1: 1, param2: 0) #=> raises Klass::ErrorClass
+Klass.run!(param1: 1, param2: 2) #=> 2
+
+```
 
 ## Contributing
 
