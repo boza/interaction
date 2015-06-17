@@ -1,6 +1,6 @@
-require "interaction/version"
+require "simple_interaction/version"
 
-module Interaction
+module SimpleInteraction
 
   # = Interactions
   # 

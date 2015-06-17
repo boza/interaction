@@ -1,8 +1,8 @@
 require 'minitest/autorun'
-require 'interaction'
+require 'simple_interaction'
 
 class Interactor
-  include Interaction
+  include SimpleInteraction
 
   fail_with 'InteractorExp'
 
@@ -16,10 +16,10 @@ class Interactor
 end
 
 class InteractorNotImplemented
-  include Interaction
+  include SimpleInteraction
 end
 
-module Interaction
+module SimpleInteraction
   class InteractionTest < ::Minitest::Test
 
     def test_private_run
@@ -31,7 +31,7 @@ module Interaction
     end
 
     def test_error_class_not_defined
-      assert_equal Interaction::InteractionError, InteractorNotImplemented.error_class
+      assert_equal SimpleInteraction::InteractionError, InteractorNotImplemented.error_class
     end
 
     def test_should_require_params
@@ -64,7 +64,7 @@ module Interaction
     end
 
     def test_not_implemented
-       assert_raises(Interaction::NotImplemented) { InteractorNotImplemented.run(param: '1') }
+       assert_raises(SimpleInteraction::NotImplemented) { InteractorNotImplemented.run(param: '1') }
     end
 
   end  

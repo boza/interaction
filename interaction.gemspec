@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'interaction/version'
+require 'simple_interaction/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "simple_interaction"
-  spec.version       = Interaction::VERSION
+  spec.version       = SimpleInteraction::VERSION
   spec.authors       = ["Jose Boza"]
   spec.email         = ["jaboza@gmail.com"]
   spec.summary       = %q{Keep your code clean with simple interactions}
