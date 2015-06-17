@@ -9,7 +9,7 @@ To create a user, a class should be name Users::Create.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'interaction'
+gem 'simple_interaction'
 ```
 
 And then execute:
@@ -18,13 +18,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install interaction
+    $ gem install simple_interaction
 
 ## Usage
 
 ```
 class Klass
-  include Interaction
+  include SimpleInteraction
 
   fail_with 'ErrorClass'
   requires :param1, :param2     
