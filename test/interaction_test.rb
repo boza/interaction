@@ -31,7 +31,7 @@ module Interaction
     end
 
     def test_error_class_not_defined
-      assert_equal Interactor::InteractionError, InteractorNotImplemented.error_class
+      assert_equal Interaction::InteractionError, InteractorNotImplemented.error_class
     end
 
     def test_should_require_params
@@ -64,7 +64,7 @@ module Interaction
     end
 
     def test_not_implemented
-       assert_raises(Interactor::NotImplemented) { InteractorNotImplemented.run(param: '1') }
+       assert_raises(Interaction::NotImplemented) { InteractorNotImplemented.run(param: '1') }
     end
 
   end  
