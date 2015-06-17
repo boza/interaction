@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'interaction/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "simple interaction"
+  spec.name          = "simple_interaction"
   spec.version       = Interaction::VERSION
   spec.authors       = ["Jose Boza"]
   spec.email         = ["jaboza@gmail.com"]
