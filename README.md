@@ -4,6 +4,16 @@ Interactions are meant to keep controllers and models or any other business logi
 Keep intention of class clear when using interactions, for example: 
 To create a user, a class should be name Users::Create.
 
+If you are using this in a Rails application you might want to use
+
+```ruby
+gem 'simple_interaction-rails, github: "boza/simple_interaction-rails"'
+```
+
+this comes with a generator so you don't have to create individual files :)
+
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
