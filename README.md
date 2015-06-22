@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/boza/interaction/badges/gpa.svg)](https://codeclimate.com/github/boza/interaction)
+
 # Interaction
 
 Interactions are meant to keep controllers and models or any other business logic slim (YAY).
