@@ -1,5 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/boza/interaction/badges/gpa.svg)](https://codeclimate.com/github/boza/interaction)
 
+[ ![Codeship Status for boza/interaction](https://codeship.com/projects/bfb931b0-fb51-0132-06e2-1658e61aa1b1/status?branch=master)](https://codeship.com/projects/87156)
+
 # Interaction
 
 Interactions are meant to keep controllers and models or any other business logic slim (YAY).
