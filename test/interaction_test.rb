@@ -45,7 +45,8 @@ module SimpleInteraction
     end
 
     def test_success
-      assert Interactor.run(param: 'awesome interaction').success?, 'Interactor didn\'t finish successfuly' 
+      interaction = Interactor.run(param: 'awesome interaction')
+      assert interaction.success?, "Interactor didn't finish successfuly #{interaction.error}" 
     end
 
     def test_run_with_bang
