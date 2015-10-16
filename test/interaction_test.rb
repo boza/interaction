@@ -46,7 +46,7 @@ module SimpleInteraction
 
     def test_success
       interaction = Interactor.run(param: 'awesome interaction')
-      assert interaction.success?, "Interactor didn't finish successfuly #{interaction.error}" 
+      assert interaction.success?, "Interactor didn't finish successfuly #{interaction.error}"
     end
 
     def test_run_with_bang
@@ -55,7 +55,7 @@ module SimpleInteraction
 
     def test_error
       interaction = Interactor.run(param: '1')
-      refute interaction.success?, 'Interactor didn\'t finish with an error' 
+      refute interaction.success?, 'Interactor didn\'t finish with an error'
       assert_match interaction.error, "only strings please"
     end
 
@@ -68,7 +68,7 @@ module SimpleInteraction
        assert_raises(SimpleInteraction::NotImplemented) { InteractorNotImplemented.run(param: '1') }
     end
 
-  end  
+  end
 end
 
 

@@ -1,5 +1,4 @@
 module SimpleInteraction
-  
   #main interaction error class
   class InteractionError< StandardError;end
 
@@ -8,5 +7,4 @@ module SimpleInteraction
 
   # this exception will be raised if no run method is implemented on the interaction class
   class NotImplemented < InteractionError;end
-
 end

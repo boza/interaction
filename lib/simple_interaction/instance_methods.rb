@@ -16,7 +16,7 @@ module SimpleInteraction
     # sets the attr_accessor for each requirement of the intereaction
     def initialize(**opts)
       opts.select { |option, _| self.class.requirements.include?(option) }.each do |accessor, value|
-        __send__("#{accessor}=", value)
+        instance_variable_set("@#{accessor}", value)
         opts.delete(accessor)
       end
       set_optional_data(opts)
