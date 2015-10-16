@@ -17,6 +17,15 @@ module SimpleInteraction
     def initialize(**opts)
       opts.select { |option, _| self.class.requirements.include?(option) }.each do |accessor, value|
         __send__("#{accessor}=", value)
+        opts.delete(accessor)
+      end
+      set_optional_data(opts)
+    end
+
+    def set_optional_data(opts)
+      @optional_params = {}
+      opts.each do |key, value|
+        @optional_params[key] = value
       end
     end
 
@@ -27,7 +36,6 @@ module SimpleInteraction
       if success?
         @result = interaction_run
       end
-    end    
-
+    end
   end
 end

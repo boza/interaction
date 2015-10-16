@@ -12,7 +12,7 @@ module SimpleInteraction
     def requirements
       @requirements ||= []
     end
-    
+
     # specifies the error class that will be raise if interaction is run with !
     # if nothing is set InteractionError will be the default error class
     def fail_with(klass)
@@ -52,9 +52,8 @@ module SimpleInteraction
     end
 
     def set_requirements(attrs)
-      attr_accessor *attrs
+      attr_reader *attrs
       requirements.unshift(*attrs)
     end
-
-  end  
+  end
 end
