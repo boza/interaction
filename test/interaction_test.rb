@@ -53,6 +53,16 @@ module SimpleInteraction
       assert_equal "This is the result for awesome interaction", Interactor.run!(param: 'awesome interaction')
     end
 
+    def test_optional_parameters
+      interaction = Interactor.run(param: 'awesome interaction', optional: 'this is an optional parameter')
+      assert_equal 'this is an optional parameter', interaction.instance_variable_get('@optional_params')[:optional]
+    end
+
+    def test_optional_parameters
+      interaction = Interactor.run(param: 'awesome interaction')
+      assert_empty interaction.instance_variable_get('@optional_params')
+    end
+
     def test_error
       interaction = Interactor.run(param: '1')
       refute interaction.success?, 'Interactor didn\'t finish with an error'
